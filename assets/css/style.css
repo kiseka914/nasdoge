@@ -1,0 +1,609 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: font1;
+    src: url(/assets/font/MamaBear.otf);
+}
+
+@font-face {
+    font-family: Stopbuck;
+    src: url(/assets/font/Stopbuck.ttf);
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 30s linear infinite;
+}
+/* font-family: font1; */
+
+
+body {
+    font-family: "Urbanist", sans-serif;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1.5vw;
+}
+
+.header,
+.about,
+.toknomics,
+.howtobuy,
+.roadmap,
+footer {
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+
+}
+
+.header {
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+}
+
+.header {
+    background-image: url('/assets/images/header.png');
+    padding: 0vw 5vw;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3vw;
+    max-width: 90%;
+    padding: 0vw 2vw;
+    border-radius: 8px;
+    border: 4px solid #201A17;
+    font-family: font1;
+    color: #201A17;
+    margin: auto;
+    background-color: #FFF6E5;
+    position: absolute;
+    top: 5vw;
+    width: 100%;
+}
+
+nav a:first-child {
+    color: #CAA167;
+}
+
+nav a {
+    font-size: 1.5vw;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #CAA167;
+}
+
+nav img {
+    width: 100%;
+    max-width: 5vw;
+    transform: scale(1.6);
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 0.4vw;
+    position: relative;
+    z-index: 99;
+}
+
+.links a img {
+    width: 100%;
+    max-width: 6vw;
+
+}
+
+.links a {
+    transition: all 0.3s ease-in-out;
+}
+
+.links a:hover {
+    transform: scale(1.1);
+}
+
+h2 {
+    font-family: font1;
+}
+
+
+
+.ca span {
+    color: #FFA217;
+}
+
+.ca {
+    font-size: 1.5vw;
+    color: #fff;
+    position: relative;
+    z-index: 99;
+    margin-top: 1vw;
+}
+
+
+/* buy-section */
+.buy-section {
+    margin-top: -5vw;
+    background-image: linear-gradient(to bottom, #00000000, #5a7613, #5a7613, #5a7613, #5a7613);
+}
+
+
+/* about  */
+.about {
+    background-image: url('/assets/images/about.png');
+    padding: 15vw 0vw;
+    position: relative;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 4vw;
+    margin-bottom: 3vw;
+}
+
+.about p {
+    font-family: font1;
+    font-size: 2vw;
+}
+
+.about .bone {
+    width: 100%;
+    max-width: 10vw;
+}
+
+.about a .buy-btn {
+    width: 100%;
+    max-width: 15vw;
+    margin-top: 1vw;
+}
+
+.about a {
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+}
+
+.about a:hover {
+    transform: scale(1.1);
+}
+
+
+/* toknomics  */
+.toknomics {
+    background-image: url('/assets/images/tokenomic.png');
+    background-size: cover;
+    height: 70vw;
+    padding: 1vw 15vw;
+    margin-top: -37vw;
+    position: relative;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+
+}
+
+.toknomics img {
+    width: 100%;
+    max-width: 50vw;
+}
+
+
+.top_bottom {
+    animation: topbuttom 1s ease-in-out infinite alternate;
+}
+
+
+
+
+
+@keyframes topbuttom {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(20px);
+        /* Adjust the value to control the distance */
+    }
+}
+
+
+/* howtobuy */
+.howtobuy {
+    background-image: url('/assets/images/how-to-buy.png');
+
+    padding: 18vw 20vw;
+    margin-top: -15vw;
+    position: relative;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.howtobuy img {
+    position: absolute;
+    top: 20vw;
+    right: 10vw;
+    width: 100%;
+    max-width: 10vw;
+}
+
+.howtobuy h2 {
+    text-align: center;
+    font-size: 4vw;
+    color: #fff;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 4px;
+    margin-bottom: 4vw;
+}
+
+.howtobuy .buy_box {
+    background-color: #FFF2D9;
+    border: 4px solid #000000;
+    border-radius: 13.59px;
+    padding: 1vw 4vw;
+    text-align: center;
+    position: relative;
+    margin-bottom: 2vw;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.howtobuy .buy_box p {
+    font-family: font1;
+    font-size: 2vw;
+    color: #201A17;
+}
+
+
+
+.howtobuy .buy_box .phase {
+    position: absolute;
+    display: inline-block;
+    width: 4vw;
+    height: 4vw;
+    background-color: #FFF2D9;
+    border-radius: 50%;
+    border: 4px solid #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Stopbuck;
+    font-size: 3vw;
+    top: 5vw;
+    left: -2vw;
+}
+
+.howtobuy .buy_box_2 {
+    background-color: #FFF2D9;
+    border: 4px solid #000000;
+    border-radius: 13.59px;
+    padding: 1vw 4vw;
+    text-align: center;
+    position: relative;
+    margin-bottom: 2vw;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.howtobuy .buy_box_2 p {
+    font-family: font1;
+    font-size: 2vw;
+    color: #201A17;
+}
+
+.howtobuy .buy_box_2 .phase {
+    position: absolute;
+    display: inline-block;
+    width: 4vw;
+    height: 4vw;
+    background-color: #FFF2D9;
+    border-radius: 50%;
+    border: 4px solid #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Stopbuck;
+    font-size: 3vw;
+    top: 4vw;
+    right: -2vw;
+}
+
+/* roadmap  */
+.roadmap {
+    background-image: url('/assets/images/roadmap.png');
+    height: 120vw;
+    padding: 10vw 15vw;
+    margin-top: -15vw;
+    position: relative;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.roadmap h2 {
+    text-align: center;
+    font-size: 4vw;
+    color: #fff;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 4px;
+    margin-bottom: 4vw;
+    position: relative;
+}
+
+.roadmap h2 img {
+    width: 100%;
+    max-width: 6vw;
+    margin: auto;
+    margin-bottom: -24px;
+}
+
+.roadmap .phase {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.roadmap .phase h3 {
+    font-family: font1;
+    font-size: 2.8vw;
+    color: #fff;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 2px;
+}
+
+.roadmap .phase ul {
+    font-family: Stopbuck;
+    font-size: 1.5vw;
+    margin-left: 1.5vw;
+    color: #000;
+}
+
+.roadmap .phase_img {
+    width: 100%;
+    max-width: 25vw;
+}
+
+
+footer {
+    background-image: url('/assets/images/footer.png');
+    height: 65vw;
+    padding: 1vw 15vw;
+    margin-top: -8vw;
+    position: relative;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+}
+
+footer #copyText {
+    position: absolute;
+    font-size: 1vw;
+    color: #fff;
+    top: 38vw;
+    left: 27vw;
+}
+
+footer .copy {
+    position: absolute;
+    position: absolute;
+    top: 36vw;
+    right: 32vw;
+    padding: 2vw;
+
+}
+
+footer h3 {
+    font-family: Stopbuck;
+    color: #fff;
+    margin-top: 1vw;
+    font-size: 1.2vw;
+}
+
+
+
+
+@media screen and (max-width: 480px) {
+
+    @keyframes topbuttom {
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(10px);
+            /* Adjust the value to control the distance */
+        }
+    }
+
+    p {
+        font-size: 2.5vw;
+    }
+
+    .ca {
+        font-size: 2.5vw;
+    }
+
+    nav {
+        width: 100%;
+        max-width: 91%;
+        padding: 1vw 2vw;
+        border: 2px solid #201A17;
+
+    }
+
+    nav a {
+        font-size: 2vw;
+    }
+
+    nav img {
+        transform: scale(2.2);
+    }
+
+    /* about  */
+    .about {
+        padding-bottom: 40vw;
+    }
+    .about h2 {
+        font-size: 18vw;
+        line-height: 100%;
+    }
+
+    .about p {
+        font-size: 5.5vw;
+        text-align: center;
+    }
+
+    .toknomics {
+        padding: 4vw 15vw;
+        height: 382vw;
+        margin-top: -92vw;
+        background: url(/assets/images/tokenomics-mobile.png);
+        background-size: cover;
+
+    }
+
+    .about a .buy-btn {
+        width: 100%;
+        max-width: 60vw;
+        margin-top: 2vw;
+    }
+
+    /* howtobuy */
+    .howtobuy {
+        padding: 18vw 4vw;
+        gap:8vw;
+        background-size: 264% 140% !important;
+        background-position: 50% 35%;
+
+    }
+
+    .howtobuy h2 {
+        font-size: 15vw;
+        -webkit-text-stroke-width: 2px;
+        line-height: 110%;
+    }
+
+    .howtobuy .buy_box p {
+        font-size: 7.3vw;
+    }
+
+    .howtobuy .buy_box_2 p {
+        font-size: 7.3vw;
+    }
+
+    .howtobuy .buy_box {
+        border: 1px solid #000000;
+        padding: 5vw  3vw;
+    }
+
+    .howtobuy .buy_box_2 {
+        border: 1px solid #000000;
+        padding: 5vw  3vw;
+    }
+
+    .howtobuy .buy_box .phase {
+        border: 1px solid #000000;
+        width: 12vw;
+        height:12vw;
+        font-size: 8vw;
+        top:-7vw;
+        left: 39vw;
+    }
+
+    .howtobuy .buy_box_2 .phase {
+        border: 1px solid #000000;
+        width: 12vw;
+        height:12vw;
+        font-size: 8vw;
+        top:-9vw;
+        left: 39vw;
+    }
+
+    /* .roadmap  */
+    .roadmap {
+        height: 190vw;
+        padding: 15vw 8vw;
+    }
+
+    .roadmap h2 {
+        font-size: 6vw;
+        -webkit-text-stroke-width: 2px;
+    }
+
+    .roadmap .phase h3 {
+        font-size: 4vw;
+        -webkit-text-stroke-width: 1px;
+    }
+
+    .roadmap .phase ul {
+        font-size: 2.5vw;
+        margin-left: 3vw;
+    }
+
+    .roadmap .phase_img {
+        width: 100%;
+        max-width: 40vw;
+        display: flex;
+        align-content: center;
+        justify-content: end;
+    }
+
+    footer {
+        background-image: url('/assets/images/footer.png');
+        height: 65vw;
+        padding: 1vw 15vw;
+        margin-top: -15vw;
+        position: relative;
+        z-index: 99;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        flex-direction: column;
+    }
+
+    footer h3 {
+        font-family: Stopbuck;
+        color: #fff;
+        margin-top: 1vw;
+        font-size: 2vw;
+    }
+}
